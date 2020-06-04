@@ -1,16 +1,38 @@
-# Remake
-An HTML-centric and easy-to-use web app framework 
 
-## Why Remake?
-With Remake, you can **build sophisticated apps** while focusing on the core of the *web*: **structured HTML**. It does so by:
 
-* allowing creation of **editable content with just HTML**
-* providing an **easy, intuitive and powerful syntax** for data handling
-* being **quick to set up**, making an ideal option for **prototyping** and **rapid development** 
+<p align="center">
+  
+  <img src="/remake-logo.gif" alt="Remake">
+  <br><br>
+Make interactive web apps with only HTML
+  <br>
+  <a href="#get-started">Get started</a>
+  ·
+  <a href="#learn-remake">Learn how to use</a>
+  ·
+  <a href="https://requestcreative.com" target=_blank rel=_noopener>Try it live</a>
+</p>
 
-To know more about **what sets Remake apart** from other libraries, check our [Creating with Remake Guide](#todo-add-link). 
+## Table of contents
 
-You can also **see Remake in action** at [RequestCreative, our live demo](https://requestcreative.com). 
+- [What sets Remake apart](#what-sets-remake-apart)
+- [Get started](#get-started)
+- [Learn Remake](#learn-remake)
+  - [Learn by doing](#practical-tutorials)
+  - [How Remake Works](#how-remake-works)
+- [How to Contribute](#how-to-contribute)
+  - [Contributors](#contributors)
+- [Contacts and links](#stay-in-the-loop)
+
+## What sets Remake apart
+
+* **editable content** with just HTML
+* **built-in CRUD** features
+* **easy, intuitive and powerful syntax** for data handling
+* **quick set up**, ideal for prototyping and rapid development
+* native **hosting service**
+
+To learn more about its features, check [Remake's official documentation](https://docs.remaketheweb.com/). 
 
 ## Get started
 Step-by-step instructions on how to **set up a new project** with Remake. 
@@ -29,78 +51,85 @@ Use Remake CLI's **create** command to create a new Remake-powered project:
 ```
 remake create <project-dir>
 ```
-### 2 - Run project server
+Replace `<project-dir>` with the new project's name.
+
+### 2 - Run project
 Any newly-created Remake project provides a **custom script** (*dev*) to run the project through a **development server**.
 
 To run the development server, you can **access the project folder** through the command line and run: 
 ```
 npm run dev
 ```
-<!-- TODO: ask for the default port -->
-### 3 - Learn Remake and start developing
-With your project set up, you're ready to either **implement** your project or [**learn how to use Remake**](#learn-about-remake).
 
-## Learn about Remake
-There are many ways to learn a subject, some more practical, and some more in-depth. So we suggest:
+You're now all set to implement your project.
+Or maybe you'd like to [**learn more about Remake**](#learn-remake).
 
-- (**guided examples**)[#guided-examples], to learn the basics of Remake with practical scenarios
-- (**in-depth concept explanation**)[#remake-in-depth], to understand more advanced concepts and build larger projects 
+### 3 - (optional) Deploy Project
 
-### Guided examples
-One of the best ways to teach is by example. 
-These tutorials are **beginner-friendly introductions** to Remake's API, highlighting its key features in practical ways:
+To deploy your app, go to its root folder and run:
+```
+remake deploy
+```
+
+## Learn Remake 
+
+- (**Learn by doing**)[#practical-tutorials] (**Recommended for beginners**)- . Step-by-step examples to get started with Remake
+- (**Learn how Remake works**)[#how-remake-works], to understand more advanced concepts and build larger projects 
+
+## Practical tutorials
+Beginner-friendly tutorials to get you started with learning Remake:
 
 * [Build a todo list in 12 lines of HTML](https://docs.remaketheweb.com/a-simple-example-app/)
 * [Build a Trello clone in 30 minutes](https://tutorials.remaketheweb.com/)
 
-<!-- TODO: love this content, but I suggest we move it to a separate file, as it's an in-depth guide by itself -->
-### Remake in-depth
+## How Remake works
 > What if every HTML webpage knew how to save, edit, and add new items by itself?
 
-Remake's mission is to allow creating *web* apps **in record time** and with **minimum overhead**. We believe that anyone proficient in HTML and CSS (and some templating engine, like Handlebars) should be able to **create apps with data management features** instantly, but without the need for back-end or tech-specific knowledge.
+Remake allows creating complete *web* apps **in record time and with minimum overhead**. Thus, anyone proficiennt in HTML, CSS, and [Handlebars](https://handlebarsjs.com/) can use it, with no back-end knowledge whatsoever. To achieve this, Remake comes built-in with:
 
-And this is why Remake comes built-in with:
-
-- [**CRUD operations**](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete), with no additional library needed
+- [**CRUD operations**](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
 - **automatic data saving** after editing content
-- a **flat file database** that doesn't require custom configuration, to make it easier to use and understand
-- **user accounts** People can sign up and log in to your app!
-- **a simple API to handle data** that faciitates accessing and saving nested objects
+- **flat file database** system that doesn't require any configuration
+- **user account management** 
+- **simple API for data handling** that facilitates accessing and saving nested objects
 
-#### The Remake API and Data Attributes
+### How Remake Works - Data Handling
 
-Remake's API is centered around **data attributes** that **tag data to HTML elements**.
-And to make it as intuitive as possible, we defined a limited set of rules for API-specific data attributes:
-  
-- use specific prefixes in data attribues to set data as **input data** (`data-i`) or **output data** (`data-o`)
-  - Ex.:<!-- TODO: add example -->
-- use `data-i-editable` in an element to allow **editing and automatic saving** of its data
-<!-- TODO: I don't really get this one, maybe we could rephrase it -->
-- use `data-i-new` to render back-end partial templates and add them to the page
+> HTML is formatted like a tree 🌳: it has a root (the parent element) and children linked to it (child elements).
 
-##### How Remake (actually) handles data
+<!-- todo: make a diagram -->
+Remake **tags HTML elements to data** by looking into their position on the page. To tag data to elements, Remake checks for **custom data attributes** for input and output.
 
-HTML is formatted like a tree 🌳: it has a root (the parent element) and children linked to it (child elements). 
+### How Remake Works - Input data attributes
 
-<!-- TODO: we could make a simple diagram to examplify, with "page" at the bottom and html elements on top", inheriting from each other -->
+Input data attributes are used to edit data. They're always prefixed with `data-i-`. 
+There are **two attributes with specific purposes**:
 
-And with Remake, we apply this branching model to **objects** tagged to HTML elemens, as well. It's by looking at an element's position in the page's "tree-like structure" that **Remake determines what to save** automatically.
+- `data-i-editable` enables **editing and saving** data
+- `data-i-new` sets a template for newly-created elements of a specific type
 
-Here's an example:
+#### Examples - Input data attributes
+<!-- todo: add examples -->
+
+### How Remake Works - Output data attributes
+
+Output data attributes tag an element to specific data. They're always prefixed with `data-o-`.
+Elements tagged to output data **require a `data-o-type`** attribute, whose value can be either "object" or "list", depending on the data's nature.
+
+Here's a simple example:
 
 ```html
 <div data-o-type="object"></div>
 ```
-
-This element has been tagged as an `Object`, which means Remake will convert it into this:
+In this example, the `div` has been tagged as an `Object`. Thus, Remake will convert it into:
 
 ```javascript
 {}
 ```
 
-This is a basic object. Let's go through a few more examples, on the next chapter.
+But this is just an example with a basic object. Let's go through a few more examples.
 
-##### Example 1 - Key/value pairs
+#### Example 1 - Key/value pairs
 
 ```html
 <div data-o-type="object" data-o-key-name="David"></div>
@@ -111,12 +140,12 @@ This will be converted into an object with a key/value pair inside of it:
 ```javascript
 {name: "David"}
 ```
+Here's an explanation of what happened:
 
-The first attribute (`data-o-type`) tells us which data type to expect. It can be set to *only* `object` or `list`.
+- the first attribute (`data-o-type`) tells us which data type to expect. It can be set to *only* `object` or `list`
+- the second attribute (`data-o-key-name`) tells us that this `object` has a key of `name`, whose value matches the attribute's value ("David", in this case).
 
-The second attribute (`data-o-key-name`) tells us that this `object` has a key of `name` (the key is always the part that comes after `data-o-key-`). And we look at the attribute's value to get the key's value.
-
-##### Example 2 - Nested data
+#### Example 2 - Nested data
 
 ```html
 <div data-o-type="object">
@@ -125,13 +154,15 @@ The second attribute (`data-o-key-name`) tells us that this `object` has a key o
 </div>
 ```
 
-This example is a bit more advanced, as it relies on **nested** elements to create **nested** data:
+This example is a bit more advanced, as it relies on **nested** elements to create nested data:
 
 ```javascript
 {person: {name: "David"}}
 ```
 
 In this example, we use the `data-o-key` attribute — with nothing after it — to create an object inside of an object. The value of `data-o-key` tells us which key the nested object will be.
+
+Hence, the resulting **data matches its element's structure**.
 
 #### Example 3 - Lists/Arrays of objects
 
@@ -169,23 +200,23 @@ When Remake looks at this, all it sees is:
 ]
 ```
 
-## Contributions
+## How to contribute
+
+You can help us improve Remake by:
+
+- reporting or fixing bugs
+- requesting features
+- updating documentation
+- refactoring code
+
+<!-- TODO: add link to issue list -->
+So feel free **to file an issue**, and we'll provide you feedback as soon as possible!
+
+### Contributors
 
 We have to thank these fellows for all their help in (Re)making this project:
 
 - **[Andrew de Jong](https://gitlab.com/android4682)**
-
-### How to contribute
-
-If you'd like to join our contributors -- and we'd love to have you! -- there are many ways you can help with our project:
-
-- fixing bugs
-- suggesting or implementing features
-- updating documentation
-- cleaning up code (useless comments, etc.)
-
-<!-- TODO: add link to issue list -->
-So feel free [to create an issue](), and we'll provide you feedback as soon as possible!
 
 ## Stay in the loop
 
@@ -193,6 +224,7 @@ Sign up for [our newsletter](https://form.remaketheweb.com/) to get updates as t
 
 Additionally, feel free to: 
 
+* [visit Remake's official website](https://remaketheweb.com/)
 * [follow panphora (Remake's creator) on Twitter](https://twitter.com/panphora)
 * [View Remake's public roadmap on Trello](https://trello.com/b/BXvugSjT/remake)
 
