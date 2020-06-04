@@ -84,11 +84,11 @@ Beginner-friendly tutorials to get you started with learning Remake:
 
 Remake allows creating complete *web* apps **in record time and with minimum overhead**. Thus, anyone proficiennt in HTML, CSS, and [Handlebars](https://handlebarsjs.com/) can use it, with no back-end knowledge whatsoever. To achieve this, Remake comes built-in with:
 
-- [**CRUD operations**](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
-- **automatic data saving** after editing content
-- **flat file database** system that doesn't require any configuration
-- **user account management** 
-- **simple API for data handling** that facilitates accessing and saving nested objects
+- [CRUD operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
+- automatic data saving after editing content
+- flat file database system with no configuration
+- user account management
+- simple API for data handling
 
 ### How Remake Works - Data Handling
 
