@@ -1,18 +1,15 @@
 
 
-<p align="center">
-  
-  <img src="/remake-logo.gif" alt="Remake">
-  <br><br>
-Make interactive web apps with only HTML
-  <br>
-  <a href="#get-started">Get started</a>
-  ·
-  <a href="#learn-remake">Learn how to use</a>
-  ·
-  <a href="https://requestcreative.com" target=_blank rel=_noopener>Try it live</a>
+<img src="/remake-logo.gif" alt="Remake">
+<p>Make interactive web apps with only HTML</p>
+<br>
+<p>
+<a href="#get-started">Get started</a>
+·
+<a href="#learn-remake">Learn how to use</a>
+·
+<a href="https://requestcreative.com" target=_blank rel=_noopener>Try it live</a>
 </p>
-
 ## Table of contents
 
 - [What sets Remake apart](#what-sets-remake-apart)
