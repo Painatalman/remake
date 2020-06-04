@@ -1,10 +1,11 @@
-
-
 <img src="/remake-logo.gif" alt="Remake">
-<br>
 Make interactive web apps with only HTML
 <p>
-<a href="#get-started">Get started</a>·<a href="#learn-remake">Learn how to use</a>·<a href="https://requestcreative.com" target=_blank rel=_noopener>
+<a href="#get-started">Get started</a>
+  ·
+  <a href="#learn-remake">Learn how to use</a>
+  ·
+  <a href="https://requestcreative.com" target=_blank rel=_noopener>
   Try it live
 </a>
 </p>
