@@ -1,12 +1,12 @@
 <img src="/remake-logo.gif" alt="Remake">
-Make interactive web apps with only HTML
+Build interactive websites with only HTML
 <p>
 <a href="#get-started">Get started</a>
   ·
   <a href="#learn-remake">Learn how to use</a>
   ·
   <a href="https://requestcreative.com" target=_blank rel=_noopener>
-  Try it live
+  See a demo
 </a>
 </p>
 
@@ -22,12 +22,12 @@ Make interactive web apps with only HTML
 - [Contacts and links](#stay-in-the-loop)
 
 ## What sets Remake apart
+> What if every HTML webpage knew how to save, edit, and add new items by itself?
 
-* **editable content** with just HTML
-* **built-in CRUD** features
-* **easy, intuitive and powerful syntax** for data handling
-* **quick set up**, ideal for prototyping and rapid development
-* native **hosting service**
+Remake allows creating feature-rich websites **in record time and with minimum overhead**, with no back-end knowledge whatsoever:
+
+* **Editable content** with just HTML, thanks to *built-in* [CRUD operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
+* **Easy, intuitive and powerful syntax** for data handling
 
 To learn more about its features, check [Remake's official documentation](https://docs.remaketheweb.com/). 
 
@@ -51,53 +51,55 @@ remake create <project-dir>
 Replace `<project-dir>` with the new project's name.
 
 ### 2 - Run project
-Any newly-created Remake project provides a **custom script** (*dev*) to run the project through a **development server**.
+To run your project with a server, go to its folder and run **dev** (a custom script already included in package.json): 
 
-To run the development server, you can **access the project folder** through the command line and run: 
 ```
+cd <project_folder>*
 npm run dev
 ```
 
+*<project_folder> is the path to project's folder
+### 3 - Start implementing
+
 You're now all set to implement your project.
+You can edit your project's code in the **app folder**, where you'll find:
+ - #TODO
+ - #TODO
+ - #TODO
+ 
 Or maybe you'd like to [**learn more about Remake**](#learn-remake).
 
-### 3 - (optional) Deploy Project
+### 4 - (optional) Deploy Project
 
-To deploy your app, go to its root folder and run:
+> **NOTE** You need to [set up an account]() first 
+
+To deploy your app, go to its root folder and run remake CLI's deploy command:
+
 ```
+cd <project_folder>*
 remake deploy
 ```
+Congrats, you can now share your project with the world through its custom subdomain! 
 
+*<project_folder> is the path to project's folder
 ## Learn Remake 
 
-- (**Learn by doing**)[#practical-tutorials] (**Recommended for beginners**)- . Step-by-step examples to get started with Remake
-- (**Learn how Remake works**)[#how-remake-works], to understand more advanced concepts and build larger projects 
-
-## Practical tutorials
-Beginner-friendly tutorials to get you started with learning Remake:
+To learn Remake, all you need is basic knowledge in HTML, CSS, and [Handlebars](https://handlebarsjs.com/).
+You can then follow one of our **practical tutorials** to learn the basics of Remake while you build a project:
 
 * [Build a todo list in 12 lines of HTML](https://docs.remaketheweb.com/a-simple-example-app/)
 * [Build a Trello clone in 30 minutes](https://tutorials.remaketheweb.com/)
 
+And fully understand the concepts behind Remake, feel free to check out (**how Remake works**)[#how-remake-works].  
+
 ## How Remake works
-> What if every HTML webpage knew how to save, edit, and add new items by itself?
-
-Remake allows creating complete *web* apps **in record time and with minimum overhead**. Thus, anyone proficiennt in HTML, CSS, and [Handlebars](https://handlebarsjs.com/) can use it, with no back-end knowledge whatsoever. To achieve this, Remake comes built-in with:
-
-- [CRUD operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
-- automatic data saving after editing content
-- flat file database system with no configuration
-- user account management
-- simple API for data handling
-
-### How Remake Works - Data Handling
 
 > HTML is formatted like a tree 🌳: it has a root (the parent element) and children linked to it (child elements).
 
 <!-- todo: make a diagram -->
 Remake **tags HTML elements to data** by looking into their position on the page. To tag data to elements, Remake checks for **custom data attributes** for input and output.
 
-### How Remake Works - Input data attributes
+### How to input data
 
 Input data attributes are used to edit data. They're always prefixed with `data-i-`. 
 There are **two attributes with specific purposes**:
@@ -105,10 +107,10 @@ There are **two attributes with specific purposes**:
 - `data-i-editable` enables **editing and saving** data
 - `data-i-new` sets a template for newly-created elements of a specific type
 
-#### Examples - Input data attributes
+### Examples - Input data attributes
 <!-- todo: add examples -->
 
-### How Remake Works - Output data attributes
+### How to export data
 
 Output data attributes tag an element to specific data. They're always prefixed with `data-o-`.
 Elements tagged to output data **require a `data-o-type`** attribute, whose value can be either "object" or "list", depending on the data's nature.
@@ -199,21 +201,11 @@ When Remake looks at this, all it sees is:
 
 ## How to contribute
 
-You can help us improve Remake by:
+You can join our [list of contributors] by:
 
-- reporting or fixing bugs
-- requesting features
-- updating documentation
-- refactoring code
-
-<!-- TODO: add link to issue list -->
-So feel free **to file an issue**, and we'll provide you feedback as soon as possible!
-
-### Contributors
-
-We have to thank these fellows for all their help in (Re)making this project:
-
-- **[Andrew de Jong](https://gitlab.com/android4682)**
+- [Reporting bugs](https://github.com/panphora/remake/issues/new?assignees=&labels=&template=bug_report.md&title=)
+- [Requesting features](https://github.com/panphora/remake/issues/new?assignees=&labels=&template=feature_request.md&title=)
+- [Fixing an issue](https://github.com/panphora/remake/issues) -- don't forget to assign them to you first!
 
 ## Stay in the loop
 
@@ -221,9 +213,9 @@ Sign up for [our newsletter](https://form.remaketheweb.com/) to get updates as t
 
 Additionally, feel free to: 
 
-* [visit Remake's official website](https://remaketheweb.com/)
-* [follow panphora (Remake's creator) on Twitter](https://twitter.com/panphora)
-* [View Remake's public roadmap on Trello](https://trello.com/b/BXvugSjT/remake)
+* [Remake's official website](https://remaketheweb.com/)
+* [Panphora's Twitter](https://twitter.com/panphora)
+* [Remake's public roadmap on Trello](https://trello.com/b/BXvugSjT/remake)
 
 
 
