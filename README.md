@@ -1,4 +1,6 @@
-<img src="/remake-logo.gif" alt="Remake">
+<h1>
+  <img src="/remake-logo.gif" alt="Remake">
+</h1>
 Build interactive websites with only HTML
 <p>
 <a href="#get-started">Get started</a>
